@@ -1,5 +1,10 @@
 import express from "express";
+import './modelos/relationsModelo.js';
 import { routerMascotas } from "./rutas/mascotasRouter.js";
+import { adoptions } from "./rutas/adoptions.js";
+import { company } from "./rutas/company.js";
+import { requestsM } from "./rutas/requestsM.js";
+import { users } from "./rutas/users.js";
 import {db} from "./database/conexion.js";
 import cors from "cors";
 //Crear instancia de Express
@@ -22,8 +27,13 @@ app.get('/', (req, res) => {
     res.send('Bienvenido al sitio de adopción de mascotas');
 });
 
-//Llamar rutas de mascotas
+//Llamar rutas
 app.use("/mascotas",routerMascotas);
+app.use("/adopciones",adoptions);
+app.use("/empresa",company);
+app.use("/solicitudes",requestsM);
+app.use("/usuarios",users);
+
 
 //Puerto de Servidor
 const PORT=4000;

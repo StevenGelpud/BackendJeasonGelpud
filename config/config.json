@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "trabajos",
+    "password": "trabajos",
+    "database": "ad_mascotas",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "trabajos",
+    "password": "trabajos",
+    "database": "ad_mascotas_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "trabajos",
+    "password": "trabajos",
+    "database": "ad_mascotas_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

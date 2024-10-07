@@ -33,8 +33,12 @@ const Usuarios = db.define("usuarios", {
         type: Sequelize.DATE,
         allowNull: false,
         defaultValue: Sequelize.NOW
+    },
+    admin: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false // Por defecto es false
     }
 });
 
 export { Usuarios };
-
